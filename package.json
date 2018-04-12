@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -w src --exec \"babel-node src --presets es2015\"",
-    "test": "eslint src"
+    "test": "eslint src",
+    "prestart": "npm install",
+    "start": "npm run dev"
   },
   "author": "quangtm",
   "license": "ISC",
