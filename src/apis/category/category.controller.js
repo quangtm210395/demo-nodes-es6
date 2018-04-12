@@ -21,7 +21,7 @@ export default {
                     res.status(400).json({message: err.message});
                     return;
                 }
-                res.status(200).json({message: 'Added new Category successful!'});
+                res.status(200).json({message: 'Added new Category successful!', category: category});
             });
         }
     },
@@ -31,12 +31,12 @@ export default {
     getAll: (req, res) => {
         Category
             .find()
-            .select("_id name description")
+            .select('_id name description')
             .exec((err, categories) => {
                 if (err) {
                     res.status(400).json({message: 'Failed!'});
                 }
                 res.status(200).json({message: 'All Categories', categories: categories});
-            })
+            });
     }
-}
+};

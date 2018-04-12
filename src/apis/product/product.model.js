@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 
 let product = mongoose.Schema({
     name: {
@@ -14,4 +14,4 @@ let product = mongoose.Schema({
     }
 });
 
-export default mongoose.mode('Product', product);
+export default mongoose.model('Product', product);
